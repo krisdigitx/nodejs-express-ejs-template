@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1= title
+  p #{title}
+  p#count
+  script(src="/socket.io/socket.io.js")
+  script.
+    var socket = io();
+    var count = document.getEl
+    socket.on('users', function(data){
+      count.
+    });
+  
+  form(name="add-estimation")
+          div.input
+              span.label nickname
+              input(type="text", name="nickname")
+          p
+          div.input
+              span.label message
+              input(type="text", name="message")
+          div.actions
+              input(type="submit", value="send")
